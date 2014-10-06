@@ -7,9 +7,8 @@ Current version: 1.0
 
 Example
 ===========
-http://pierrydev.com/ok.png
-
-http://pierrydev.com/cancel.png
+![alt tag](https://raw.githubusercontent.com/Pierry/SimpleToast/master/screentshots/cancel.png)
+![alt tag](https://raw.githubusercontent.com/Pierry/SimpleToast/master/screentshots/ok.png)
 
 
 Usage
