@@ -8,6 +8,7 @@ Current version: 1.0
 Example
 ===========
 http://pierrydev.com/ok.png
+
 http://pierrydev.com/cancel.png
 
 
