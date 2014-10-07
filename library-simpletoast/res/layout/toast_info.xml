@@ -3,7 +3,7 @@
     android:id="@+id/layout"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@drawable/list_border_back_gray" >
+    android:background="@drawable/list_border_back_green" >
 
     <ImageView
         android:id="@+id/img"
