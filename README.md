@@ -1,6 +1,8 @@
 SimpleToast
 ===========
 
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-SimpleToast-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1031)
+
 Notifications for Android (like a Toast)
 
 Current version: 1.0
