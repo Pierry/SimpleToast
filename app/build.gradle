@@ -1,0 +1,30 @@
+apply plugin: 'com.android.library'
+ext {
+  PUBLISH_GROUP_ID = 'com.github.pierry.simpletoast'
+  PUBLISH_ARTIFACT_ID = 'simple-toast-library'
+  PUBLISH_VERSION = '1.0.0'
+}
+android {
+  compileSdkVersion 21
+  buildToolsVersion "21.1.2"
+
+  defaultConfig {
+    minSdkVersion 14
+    targetSdkVersion 21
+    versionCode 1
+    versionName "1.0"
+  }
+
+  buildTypes{
+    release {
+      minifyEnabled true
+      shrinkResources true
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+}
+
+dependencies {
+  compile fileTree(dir: 'libs', include: ['*.jar'])
+  compile 'com.android.support:appcompat-v7:21.0.3'
+}
