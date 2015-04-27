@@ -13,8 +13,23 @@ Example
 ![alt tag](https://raw.githubusercontent.com/Pierry/SimpleToast/master/screentshots/ok.png)
 
 
-Usage
+Gradle
 ===========
+
+Into your build.gradle:
+
+    repositories {
+      maven { url "https://jitpack.io" }
+    }
+
+    dependencies {
+      compile 'com.github.Pierry:SimpleToast:v1.01'
+    }
+
+Ref. https://jitpack.io/#Pierry/SimpleToast/v1.01
+
+Usage
+=============
 
 The API is kept as simple as the Toast API:
 
