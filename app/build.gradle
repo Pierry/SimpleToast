@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'android-maven'
 
 ext {
   PUBLISH_GROUP_ID = 'com.github.pierry.simpletoast'
@@ -36,4 +35,4 @@ artifacts {
   archives sourcesJar
 }
 
-
+apply from: 'android-release-aar.gradle'
