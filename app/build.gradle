@@ -24,13 +24,23 @@ android {
   }
 }
 
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+  dependencies {
+    classpath 'com.android.tools.build:gradle:1.1.+'
+  }
+}
+
 repositories {
   mavenCentral()
   mavenLocal()
 }
 
 dependencies {
-  compile "com.android.support:appcompat-v7:21.0.0"
+  compile "com.android.support:appcompat-v7:21.+"
+  compile 'com.android.support:support-v4:+'
 }
 
 task sourcesJar(type: Jar) {
