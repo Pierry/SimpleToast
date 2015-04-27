@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+
 ext {
   PUBLISH_GROUP_ID = 'com.github.pierry.simpletoast'
   PUBLISH_ARTIFACT_ID = 'simple-toast-library'
@@ -17,7 +18,7 @@ android {
 
   buildTypes{
     release {
-      minifyEnabled true
+      minifyEnabled false
       shrinkResources true
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
@@ -25,6 +26,13 @@ android {
 }
 
 dependencies {
-  compile fileTree(dir: 'libs', include: ['*.jar'])
-  compile 'com.android.support:appcompat-v7:21.0.3'
 }
+// build a jar with source files
+task sourcesJar(type: Jar) {
+  from android.sourceSets.main.java.srcDirs
+  classifier = 'sources'
+}
+artifacts {
+  archives sourcesJar
+}
+apply plugin: 'android-maven'
