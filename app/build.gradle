@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'android-maven'
 
 ext {
   PUBLISH_GROUP_ID = 'com.github.pierry.simpletoast'
@@ -19,7 +20,6 @@ android {
   buildTypes{
     release {
       minifyEnabled false
-      shrinkResources true
       proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
     }
   }
@@ -27,7 +27,7 @@ android {
 
 dependencies {
 }
-// build a jar with source files
+
 task sourcesJar(type: Jar) {
   from android.sourceSets.main.java.srcDirs
   classifier = 'sources'
@@ -35,4 +35,5 @@ task sourcesJar(type: Jar) {
 artifacts {
   archives sourcesJar
 }
-apply plugin: 'android-maven'
+
+
