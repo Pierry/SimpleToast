@@ -24,7 +24,13 @@ android {
   }
 }
 
+repositories {
+  mavenCentral()
+  mavenLocal()
+}
+
 dependencies {
+  compile "com.android.support:appcompat-v7:21.0.0"
 }
 
 task sourcesJar(type: Jar) {
