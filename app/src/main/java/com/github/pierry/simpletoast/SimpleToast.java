@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-import com.github.pierry.simpletoast.R;
 
 /*
 * Copyright (C) 2015 Pierry Borges
