@@ -4,8 +4,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.Toast;
+import com.github.pierry.simpletoast.R;
 
 /*
 * Copyright (C) 2015 Pierry Borges
@@ -30,33 +30,45 @@ public class SimpleToast {
   private static View mView;
 
   public static void ok(Context context, String msg) {
-    mInflater = LayoutInflater.from(context);
-    View view = mInflater.inflate(R.layout.toast_ok, null);
-    getButtonInstance().setText(msg);
-    mToast = new Toast(context);
-    mToast.setView(view);
-    mToast.setDuration(Toast.LENGTH_SHORT);
-    mToast.show();
+    LayoutInflater myInflater = LayoutInflater.from(context);
+    View view = myInflater.inflate(R.layout.toast_ok, null);
+
+    Button button = (Button) view.findViewById(R.id.button);
+    button.setText(msg);
+
+    Toast mytoast = new Toast(context);
+
+    mytoast.setView(view);
+    mytoast.setDuration(Toast.LENGTH_SHORT);
+    mytoast.show();
   }
 
   public static void error(Context context, String msg) {
-    mInflater = LayoutInflater.from(context);
-    mView = mInflater.inflate(R.layout.toast_error, null);
-    getButtonInstance().setText(msg);
-    mToast = new Toast(context);
-    mToast.setView(mView);
-    mToast.setDuration(Toast.LENGTH_SHORT);
-    mToast.show();
+    LayoutInflater myInflater = LayoutInflater.from(context);
+    View view = myInflater.inflate(R.layout.toast_error, null);
+
+    Button button = (Button) view.findViewById(R.id.button);
+    button.setText(msg);
+
+    Toast mytoast = new Toast(context);
+
+    mytoast.setView(view);
+    mytoast.setDuration(Toast.LENGTH_SHORT);
+    mytoast.show();
   }
 
   public static void info(Context context, String msg) {
-    mInflater = LayoutInflater.from(context);
-    mView = mInflater.inflate(R.layout.toast_info, null);
-    getButtonInstance().setText(msg);
-    mToast = new Toast(context);
-    mToast.setView(mView);
-    mToast.setDuration(Toast.LENGTH_SHORT);
-    mToast.show();
+    LayoutInflater myInflater = LayoutInflater.from(context);
+    View view = myInflater.inflate(R.layout.toast_info, null);
+
+    Button button = (Button) view.findViewById(R.id.button);
+    button.setText(msg);
+
+    Toast mytoast = new Toast(context);
+
+    mytoast.setView(view);
+    mytoast.setDuration(Toast.LENGTH_SHORT);
+    mytoast.show();
   }
 
   private static Button getButtonInstance() {
