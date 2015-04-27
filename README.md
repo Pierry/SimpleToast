@@ -2,6 +2,7 @@ SimpleToast
 ===========
 
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-SimpleToast-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1031)
+![](https://img.shields.io/github/tag/Pierry/SimpleToast.svg?label=maven)
 
 Notifications for Android (like a Toast)
 
