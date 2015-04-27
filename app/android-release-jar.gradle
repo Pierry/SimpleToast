@@ -7,6 +7,16 @@ def version = project.PUBLISH_VERSION
 
 def localReleaseDest = "${buildDir}/release/${version}"
 
+android.libraryVariants.all { variant ->
+  def name = variant.buildType.name
+  if (!name.equals("debug")) {
+    def task = project.tasks.create "jar${name.capitalize()}", Jar
+    task.dependsOn variant.javaCompile
+    task.from variant.javaCompile.destinationDir
+    artifacts.add('archives', task);
+  }
+}
+
 task androidJavadocs(type: Javadoc) {
   source = android.sourceSets.main.java.srcDirs
   ext.androidJar = "${android.sdkDirectory}/platforms/${android.compileSdkVersion}/android.jar"
@@ -28,6 +38,7 @@ uploadArchives {
     pom.groupId = groupId
     pom.artifactId = artifactId
     pom.version = version
+
     // Add other pom properties here if you want (developer details / licenses)
     repository(url: "file://${localReleaseDest}")
   }
