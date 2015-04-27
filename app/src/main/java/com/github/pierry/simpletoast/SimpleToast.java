@@ -1,9 +1,13 @@
 package com.github.pierry.simpletoast;
 
+import android.annotation.TargetApi;
 import android.content.Context;
+import android.graphics.drawable.GradientDrawable;
+import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 /*
@@ -24,6 +28,7 @@ import android.widget.Toast;
 public class SimpleToast {
 
   private static LayoutInflater mInflater;
+  LinearLayout linearLayout;
   private static Button mButton;
   private static Toast mToast;
   private static View mView;
@@ -31,6 +36,29 @@ public class SimpleToast {
   public static void ok(Context context, String msg) {
     LayoutInflater myInflater = LayoutInflater.from(context);
     View view = myInflater.inflate(R.layout.toast_ok, null);
+
+    Button button = (Button) view.findViewById(R.id.button);
+    button.setText(msg);
+
+    Toast mytoast = new Toast(context);
+
+    mytoast.setView(view);
+    mytoast.setDuration(Toast.LENGTH_SHORT);
+    mytoast.show();
+  }
+
+  @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void ok(Context context, String msg, int color, int borderColor) {
+    LayoutInflater myInflater = LayoutInflater.from(context);
+    View view = myInflater.inflate(R.layout.toast_ok, null);
+
+    LinearLayout linearLayout = (LinearLayout) view.findViewById(R.id.layout);
+
+    GradientDrawable gradientDrawable = new GradientDrawable();
+    gradientDrawable.setColor(color);
+    gradientDrawable.setCornerRadius(4);
+    gradientDrawable.setStroke(1, borderColor);
+
+    linearLayout.setBackground(gradientDrawable);
 
     Button button = (Button) view.findViewById(R.id.button);
     button.setText(msg);
