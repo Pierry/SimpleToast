@@ -10,6 +10,12 @@ Current version: v1.6
 
 Example
 ===========
+### Default icons
+![alt tag](https://raw.githubusercontent.com/Pierry/SimpleToast/master/screentshots/ok_default.png)
+![alt tag](https://raw.githubusercontent.com/Pierry/SimpleToast/master/screentshots/cancel_default.png)
+![alt tag](https://raw.githubusercontent.com/Pierry/SimpleToast/master/screentshots/info_default.png)
+### Font awesome
+
 ![alt tag](https://raw.githubusercontent.com/Pierry/SimpleToast/master/screentshots/cancel.png)
 ![alt tag](https://raw.githubusercontent.com/Pierry/SimpleToast/master/screentshots/ok.png)
 ![alt tag](https://raw.githubusercontent.com/Pierry/SimpleToast/master/screentshots/info.png)
