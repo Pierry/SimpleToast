@@ -3,6 +3,7 @@ package com.github.pierry.simpletoast;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.graphics.drawable.GradientDrawable;
+import android.graphics.drawable.ShapeDrawable;
 import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -58,13 +59,16 @@ public class SimpleToast {
 
     LinearLayout linearLayout = (LinearLayout) view.findViewById(R.id.layout);
 
-    GradientDrawable gradientDrawable = new GradientDrawable();
-    gradientDrawable.setColor(color);
-    gradientDrawable.setAlpha(255);
-    gradientDrawable.setCornerRadius(4);
-    gradientDrawable.setStroke(1, borderColor);
+    ShapeDrawable shape = (ShapeDrawable) linearLayout.getBackground();
+    shape.getPaint().setColor(color);
 
-    linearLayout.setBackground(gradientDrawable);
+    /*GradientDrawable gradientDrawable = new GradientDrawable();
+    gradientDrawable.setColor(color);
+    gradientDrawable.setCornerRadius(4);
+    gradientDrawable.so
+    gradientDrawable.setStroke(1, borderColor);*/
+
+    linearLayout.setBackground(shape);
 
     Button button = (Button) view.findViewById(R.id.button);
     button.setText(msg);
