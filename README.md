@@ -27,10 +27,10 @@ Into your build.gradle:
     }
 
     dependencies {
-      compile 'com.github.Pierry:SimpleToast:v1.4'
+      compile 'com.github.Pierry:SimpleToast:v1.6'
     }
 
-Ref. https://jitpack.io/#Pierry/SimpleToast/v1.4
+Ref. https://jitpack.io/#Pierry/SimpleToast/v1.6
 
 Usage
 =============
