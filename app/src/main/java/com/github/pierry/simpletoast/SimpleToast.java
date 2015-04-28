@@ -165,6 +165,39 @@ public class SimpleToast {
     mytoast.show();
   }
 
+  public static void warning(Context context, String msg) {
+    LayoutInflater myInflater = LayoutInflater.from(context);
+    View view = myInflater.inflate(R.layout.toast_warning, null);
+
+    Button button = (Button) view.findViewById(R.id.button);
+    button.setText(msg);
+
+    Toast mytoast = new Toast(context);
+
+    mytoast.setView(view);
+    mytoast.setDuration(Toast.LENGTH_SHORT);
+    mytoast.show();
+  }
+
+  @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void warning(Context context, String msg,
+      String icon) {
+    LayoutInflater myInflater = LayoutInflater.from(context);
+    View view = myInflater.inflate(R.layout.toast_warning_icon, null);
+
+    Button button = (Button) view.findViewById(R.id.button);
+    button.setText(msg);
+
+    IconTextView img = (IconTextView) view.findViewById(R.id.img);
+    img.setText(icon);
+    img.setTextSize(20);
+
+    Toast mytoast = new Toast(context);
+
+    mytoast.setView(view);
+    mytoast.setDuration(Toast.LENGTH_SHORT);
+    mytoast.show();
+  }
+
   private static Button getButtonInstance() {
     mButton = (Button) mView.findViewById(R.id.button);
     return mButton;
