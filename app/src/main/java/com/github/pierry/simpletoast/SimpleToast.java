@@ -60,7 +60,7 @@ public class SimpleToast {
 
     GradientDrawable gradientDrawable = new GradientDrawable();
     gradientDrawable.setColor(color);
-    gradientDrawable.setAlpha(100);
+    gradientDrawable.setAlpha(255);
     gradientDrawable.setCornerRadius(4);
     gradientDrawable.setStroke(1, borderColor);
 
