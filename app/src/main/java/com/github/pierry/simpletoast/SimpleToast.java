@@ -2,18 +2,13 @@ package com.github.pierry.simpletoast;
 
 import android.annotation.TargetApi;
 import android.content.Context;
-import android.graphics.drawable.GradientDrawable;
-import android.graphics.drawable.ShapeDrawable;
 import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.IconTextView;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
-import com.joanzapata.android.iconify.IconDrawable;
-import com.joanzapata.android.iconify.Iconify;
 
 /*
 * Copyright (C) 2015 Pierry Borges
@@ -52,7 +47,8 @@ public class SimpleToast {
     mytoast.show();
   }
 
-  @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void ok(Context context, String msg, Iconify.IconValue iconValue) {
+  @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void ok(Context context, String msg,
+      String icon) {
     LayoutInflater myInflater = LayoutInflater.from(context);
     View view = myInflater.inflate(R.layout.toast_ok_icon, null);
 
@@ -60,8 +56,8 @@ public class SimpleToast {
     button.setText(msg);
 
     IconTextView img = (IconTextView) view.findViewById(R.id.img);
-    img.setBackground(new IconDrawable(context, iconValue)
-            .colorRes(R.color.white).actionBarSize());
+    img.setText(icon);
+    img.setTextSize(20);
 
     Toast mytoast = new Toast(context);
 
@@ -84,7 +80,8 @@ public class SimpleToast {
     mytoast.show();
   }
 
-  @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void error(Context context, String msg, Iconify.IconValue iconValue) {
+  @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void error(Context context, String msg,
+      String icon) {
     LayoutInflater myInflater = LayoutInflater.from(context);
     View view = myInflater.inflate(R.layout.toast_error_icon, null);
 
@@ -92,8 +89,8 @@ public class SimpleToast {
     button.setText(msg);
 
     IconTextView img = (IconTextView) view.findViewById(R.id.img);
-    img.setBackground(new IconDrawable(context, iconValue)
-        .colorRes(R.color.white).actionBarSize());
+    img.setText(icon);
+    img.setTextSize(20);
 
     Toast mytoast = new Toast(context);
 
@@ -116,7 +113,8 @@ public class SimpleToast {
     mytoast.show();
   }
 
-  @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void info(Context context, String msg, Iconify.IconValue iconValue) {
+  @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void info(Context context, String msg,
+      String icon) {
     LayoutInflater myInflater = LayoutInflater.from(context);
     View view = myInflater.inflate(R.layout.toast_info_icon, null);
 
@@ -124,8 +122,41 @@ public class SimpleToast {
     button.setText(msg);
 
     IconTextView img = (IconTextView) view.findViewById(R.id.img);
-    img.setBackground(new IconDrawable(context, iconValue)
-        .colorRes(R.color.white).actionBarSize());
+    img.setText(icon);
+    img.setTextSize(20);
+
+    Toast mytoast = new Toast(context);
+
+    mytoast.setView(view);
+    mytoast.setDuration(Toast.LENGTH_SHORT);
+    mytoast.show();
+  }
+
+  public static void muted(Context context, String msg) {
+    LayoutInflater myInflater = LayoutInflater.from(context);
+    View view = myInflater.inflate(R.layout.toast_muted, null);
+
+    Button button = (Button) view.findViewById(R.id.button);
+    button.setText(msg);
+
+    Toast mytoast = new Toast(context);
+
+    mytoast.setView(view);
+    mytoast.setDuration(Toast.LENGTH_SHORT);
+    mytoast.show();
+  }
+
+  @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void muted(Context context, String msg,
+      String icon) {
+    LayoutInflater myInflater = LayoutInflater.from(context);
+    View view = myInflater.inflate(R.layout.toast_muted_icon, null);
+
+    Button button = (Button) view.findViewById(R.id.button);
+    button.setText(msg);
+
+    IconTextView img = (IconTextView) view.findViewById(R.id.img);
+    img.setText(icon);
+    img.setTextSize(20);
 
     Toast mytoast = new Toast(context);
 

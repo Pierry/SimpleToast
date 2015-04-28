@@ -3,19 +3,16 @@
     android:id="@+id/layout"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@drawable/list_border_back_green"
-    >
+    android:background="@drawable/list_border_back_green" >
 
   <IconTextView
-      android:layout_height="wrap_content"
+      android:layout_height="fill_parent"
       android:layout_width="wrap_content"
       android:id="@+id/img"
-      android:layout_marginBottom="4dp"
-      android:layout_marginLeft="4dp"
-      android:layout_marginTop="4dp"
-      android:textSize="40dp"
+      android:layout_marginBottom="15dp"
+      android:layout_marginLeft="10dp"
       android:textColor="@color/white"
-      />
+      android:layout_marginTop="15dp" />
 
   <Button
       android:id="@+id/button"
@@ -32,7 +29,6 @@
       android:paddingTop="10dp"
       android:text="Texto"
       android:textColor="#FFFFFF"
-      android:textSize="14sp"
-      />
+      android:textSize="14sp" />
 
 </LinearLayout>

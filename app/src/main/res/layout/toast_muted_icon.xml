@@ -3,7 +3,7 @@
     android:id="@+id/layout"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@drawable/list_border_back_blue" >
+    android:background="@drawable/list_border_back_gray" >
 
   <IconTextView
       android:layout_height="fill_parent"
