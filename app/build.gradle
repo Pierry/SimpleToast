@@ -3,6 +3,7 @@ apply plugin: 'checkstyle'
 
 dependencies {
   compile 'com.android.support:appcompat-v7:22.1.0'
+  compile 'com.joanzapata.android:android-iconify:1.0.9'
 }
 
 android {

@@ -7,8 +7,12 @@ import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.IconTextView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+import com.joanzapata.android.iconify.IconDrawable;
+import com.joanzapata.android.iconify.Iconify;
 
 /*
 * Copyright (C) 2015 Pierry Borges
@@ -49,12 +53,13 @@ public class SimpleToast {
 
   @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void ok(Context context, String msg, int color, int borderColor) {
     LayoutInflater myInflater = LayoutInflater.from(context);
-    View view = myInflater.inflate(R.layout.toast_ok, null);
+    View view = myInflater.inflate(R.layout.toast_base, null);
 
     LinearLayout linearLayout = (LinearLayout) view.findViewById(R.id.layout);
 
     GradientDrawable gradientDrawable = new GradientDrawable();
     gradientDrawable.setColor(color);
+    gradientDrawable.setAlpha(0);
     gradientDrawable.setCornerRadius(4);
     gradientDrawable.setStroke(1, borderColor);
 
@@ -62,6 +67,10 @@ public class SimpleToast {
 
     Button button = (Button) view.findViewById(R.id.button);
     button.setText(msg);
+
+    IconTextView img = (IconTextView) view.findViewById(R.id.img);
+    img.setBackground(new IconDrawable(context, Iconify.IconValue.fa_share)
+            .colorRes(R.color.white));
 
     Toast mytoast = new Toast(context);
 
