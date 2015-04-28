@@ -52,8 +52,7 @@ public class SimpleToast {
     mytoast.show();
   }
 
-  @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void ok(Context context, String msg, int color, int borderColor,
-      Iconify.IconValue iconValue) {
+  @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void ok(Context context, String msg, Iconify.IconValue iconValue) {
     LayoutInflater myInflater = LayoutInflater.from(context);
     View view = myInflater.inflate(R.layout.toast_base, null);
 
@@ -62,7 +61,7 @@ public class SimpleToast {
 
     IconTextView img = (IconTextView) view.findViewById(R.id.img);
     img.setBackground(new IconDrawable(context, iconValue)
-            .colorRes(R.color.white).sizeDp(40));
+            .colorRes(R.color.white).sizeDp(30));
 
     Toast mytoast = new Toast(context);
 
@@ -85,12 +84,48 @@ public class SimpleToast {
     mytoast.show();
   }
 
+  @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void error(Context context, String msg, Iconify.IconValue iconValue) {
+    LayoutInflater myInflater = LayoutInflater.from(context);
+    View view = myInflater.inflate(R.layout.toast_error, null);
+
+    Button button = (Button) view.findViewById(R.id.button);
+    button.setText(msg);
+
+    IconTextView img = (IconTextView) view.findViewById(R.id.img);
+    img.setBackground(new IconDrawable(context, iconValue)
+        .colorRes(R.color.white).sizeDp(30));
+
+    Toast mytoast = new Toast(context);
+
+    mytoast.setView(view);
+    mytoast.setDuration(Toast.LENGTH_SHORT);
+    mytoast.show();
+  }
+
   public static void info(Context context, String msg) {
     LayoutInflater myInflater = LayoutInflater.from(context);
     View view = myInflater.inflate(R.layout.toast_info, null);
 
     Button button = (Button) view.findViewById(R.id.button);
     button.setText(msg);
+
+    Toast mytoast = new Toast(context);
+
+    mytoast.setView(view);
+    mytoast.setDuration(Toast.LENGTH_SHORT);
+    mytoast.show();
+  }
+
+  @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void info(Context context, String msg, Iconify.IconValue iconValue) {
+    LayoutInflater myInflater = LayoutInflater.from(context);
+    View view = myInflater.inflate(R.layout.toast_info, null);
+
+    Button button = (Button) view.findViewById(R.id.button);
+    button.setText(msg);
+
+    IconTextView img = (IconTextView) view.findViewById(R.id.img);
+    img.setBackground(new IconDrawable(context, iconValue)
+        .colorRes(R.color.white).sizeDp(30));
 
     Toast mytoast = new Toast(context);
 
