@@ -57,19 +57,6 @@ public class SimpleToast {
     LayoutInflater myInflater = LayoutInflater.from(context);
     View view = myInflater.inflate(R.layout.toast_base, null);
 
-    LinearLayout linearLayout = (LinearLayout) view.findViewById(R.id.layout);
-
-    ShapeDrawable shape = (ShapeDrawable) linearLayout.getBackground();
-    shape.getPaint().setColor(color);
-
-    /*GradientDrawable gradientDrawable = new GradientDrawable();
-    gradientDrawable.setColor(color);
-    gradientDrawable.setCornerRadius(4);
-    gradientDrawable.so
-    gradientDrawable.setStroke(1, borderColor);*/
-
-    linearLayout.setBackground(shape);
-
     Button button = (Button) view.findViewById(R.id.button);
     button.setText(msg);
 
