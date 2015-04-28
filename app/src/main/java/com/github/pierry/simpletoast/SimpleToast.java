@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.IconTextView;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
 /*
@@ -28,178 +27,133 @@ import android.widget.Toast;
 public class SimpleToast {
 
   private static LayoutInflater mInflater;
-  LinearLayout linearLayout;
-  private static Button mButton;
   private static Toast mToast;
   private static View mView;
 
   public static void ok(Context context, String msg) {
-    LayoutInflater myInflater = LayoutInflater.from(context);
-    View view = myInflater.inflate(R.layout.toast_ok, null);
-
-    Button button = (Button) view.findViewById(R.id.button);
-    button.setText(msg);
-
-    Toast mytoast = new Toast(context);
-
-    mytoast.setView(view);
-    mytoast.setDuration(Toast.LENGTH_SHORT);
-    mytoast.show();
+    mInflater = LayoutInflater.from(context);
+    mView = mInflater.inflate(R.layout.toast_ok, null);
+    initSetButtonMsg(msg);
+    mToast = new Toast(context);
+    mToast.setView(mView);
+    mToast.setDuration(Toast.LENGTH_SHORT);
+    mToast.show();
   }
 
   @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void ok(Context context, String msg,
       String icon) {
-    LayoutInflater myInflater = LayoutInflater.from(context);
-    View view = myInflater.inflate(R.layout.toast_ok_icon, null);
-
-    Button button = (Button) view.findViewById(R.id.button);
-    button.setText(msg);
-
-    IconTextView img = (IconTextView) view.findViewById(R.id.img);
+    mInflater = LayoutInflater.from(context);
+    mView = mInflater.inflate(R.layout.toast_ok_icon, null);
+    initSetButtonMsg(msg);
+    IconTextView img = (IconTextView) mView.findViewById(R.id.img);
     img.setText(icon);
     img.setTextSize(20);
-
-    Toast mytoast = new Toast(context);
-
-    mytoast.setView(view);
-    mytoast.setDuration(Toast.LENGTH_SHORT);
-    mytoast.show();
+    mToast = new Toast(context);
+    mToast.setView(mView);
+    mToast.setDuration(Toast.LENGTH_SHORT);
+    mToast.show();
   }
 
   public static void error(Context context, String msg) {
-    LayoutInflater myInflater = LayoutInflater.from(context);
-    View view = myInflater.inflate(R.layout.toast_error, null);
-
-    Button button = (Button) view.findViewById(R.id.button);
-    button.setText(msg);
-
-    Toast mytoast = new Toast(context);
-
-    mytoast.setView(view);
-    mytoast.setDuration(Toast.LENGTH_SHORT);
-    mytoast.show();
+    mInflater = LayoutInflater.from(context);
+    mView = mInflater.inflate(R.layout.toast_error, null);
+    initSetButtonMsg(msg);
+    mToast = new Toast(context);
+    mToast.setView(mView);
+    mToast.setDuration(Toast.LENGTH_SHORT);
+    mToast.show();
   }
 
   @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void error(Context context, String msg,
       String icon) {
-    LayoutInflater myInflater = LayoutInflater.from(context);
-    View view = myInflater.inflate(R.layout.toast_error_icon, null);
-
-    Button button = (Button) view.findViewById(R.id.button);
-    button.setText(msg);
-
-    IconTextView img = (IconTextView) view.findViewById(R.id.img);
+    mInflater = LayoutInflater.from(context);
+    mView = mInflater.inflate(R.layout.toast_error_icon, null);
+    initSetButtonMsg(msg);
+    IconTextView img = (IconTextView) mView.findViewById(R.id.img);
     img.setText(icon);
     img.setTextSize(20);
-
-    Toast mytoast = new Toast(context);
-
-    mytoast.setView(view);
-    mytoast.setDuration(Toast.LENGTH_SHORT);
-    mytoast.show();
+    mToast = new Toast(context);
+    mToast.setView(mView);
+    mToast.setDuration(Toast.LENGTH_SHORT);
+    mToast.show();
   }
 
   public static void info(Context context, String msg) {
-    LayoutInflater myInflater = LayoutInflater.from(context);
-    View view = myInflater.inflate(R.layout.toast_info, null);
-
-    Button button = (Button) view.findViewById(R.id.button);
-    button.setText(msg);
-
-    Toast mytoast = new Toast(context);
-
-    mytoast.setView(view);
-    mytoast.setDuration(Toast.LENGTH_SHORT);
-    mytoast.show();
+    mInflater = LayoutInflater.from(context);
+    mView = mInflater.inflate(R.layout.toast_info, null);
+    initSetButtonMsg(msg);
+    mToast = new Toast(context);
+    mToast.setView(mView);
+    mToast.setDuration(Toast.LENGTH_SHORT);
+    mToast.show();
   }
 
   @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void info(Context context, String msg,
       String icon) {
-    LayoutInflater myInflater = LayoutInflater.from(context);
-    View view = myInflater.inflate(R.layout.toast_info_icon, null);
-
-    Button button = (Button) view.findViewById(R.id.button);
-    button.setText(msg);
-
-    IconTextView img = (IconTextView) view.findViewById(R.id.img);
+    mInflater = LayoutInflater.from(context);
+    mView = mInflater.inflate(R.layout.toast_info_icon, null);
+    initSetButtonMsg(msg);
+    ;
+    IconTextView img = (IconTextView) mView.findViewById(R.id.img);
     img.setText(icon);
     img.setTextSize(20);
-
-    Toast mytoast = new Toast(context);
-
-    mytoast.setView(view);
-    mytoast.setDuration(Toast.LENGTH_SHORT);
-    mytoast.show();
+    mToast = new Toast(context);
+    mToast.setView(mView);
+    mToast.setDuration(Toast.LENGTH_SHORT);
+    mToast.show();
   }
 
   public static void muted(Context context, String msg) {
-    LayoutInflater myInflater = LayoutInflater.from(context);
-    View view = myInflater.inflate(R.layout.toast_muted, null);
-
-    Button button = (Button) view.findViewById(R.id.button);
-    button.setText(msg);
-
-    Toast mytoast = new Toast(context);
-
-    mytoast.setView(view);
-    mytoast.setDuration(Toast.LENGTH_SHORT);
-    mytoast.show();
+    mInflater = LayoutInflater.from(context);
+    mView = mInflater.inflate(R.layout.toast_muted, null);
+    initSetButtonMsg(msg);
+    mToast = new Toast(context);
+    mToast.setView(mView);
+    mToast.setDuration(Toast.LENGTH_SHORT);
+    mToast.show();
   }
 
   @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void muted(Context context, String msg,
       String icon) {
-    LayoutInflater myInflater = LayoutInflater.from(context);
-    View view = myInflater.inflate(R.layout.toast_muted_icon, null);
-
-    Button button = (Button) view.findViewById(R.id.button);
-    button.setText(msg);
-
-    IconTextView img = (IconTextView) view.findViewById(R.id.img);
+    mInflater = LayoutInflater.from(context);
+    mView = mInflater.inflate(R.layout.toast_muted_icon, null);
+    initSetButtonMsg(msg);
+    IconTextView img = (IconTextView) mView.findViewById(R.id.img);
     img.setText(icon);
     img.setTextSize(20);
-
-    Toast mytoast = new Toast(context);
-
-    mytoast.setView(view);
-    mytoast.setDuration(Toast.LENGTH_SHORT);
-    mytoast.show();
+    mToast = new Toast(context);
+    mToast.setView(mView);
+    mToast.setDuration(Toast.LENGTH_SHORT);
+    mToast.show();
   }
 
   public static void warning(Context context, String msg) {
-    LayoutInflater myInflater = LayoutInflater.from(context);
-    View view = myInflater.inflate(R.layout.toast_warning, null);
-
-    Button button = (Button) view.findViewById(R.id.button);
-    button.setText(msg);
-
-    Toast mytoast = new Toast(context);
-
-    mytoast.setView(view);
-    mytoast.setDuration(Toast.LENGTH_SHORT);
-    mytoast.show();
+    mInflater = LayoutInflater.from(context);
+    mView = mInflater.inflate(R.layout.toast_warning, null);
+    initSetButtonMsg(msg);
+    mToast = new Toast(context);
+    mToast.setView(mView);
+    mToast.setDuration(Toast.LENGTH_SHORT);
+    mToast.show();
   }
 
   @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void warning(Context context, String msg,
       String icon) {
-    LayoutInflater myInflater = LayoutInflater.from(context);
-    View view = myInflater.inflate(R.layout.toast_warning_icon, null);
-
-    Button button = (Button) view.findViewById(R.id.button);
-    button.setText(msg);
-
-    IconTextView img = (IconTextView) view.findViewById(R.id.img);
+    mInflater = LayoutInflater.from(context);
+    mView = mInflater.inflate(R.layout.toast_warning_icon, null);
+    initSetButtonMsg(msg);
+    IconTextView img = (IconTextView) mView.findViewById(R.id.img);
     img.setText(icon);
     img.setTextSize(20);
-
-    Toast mytoast = new Toast(context);
-
-    mytoast.setView(view);
-    mytoast.setDuration(Toast.LENGTH_SHORT);
-    mytoast.show();
+    mToast = new Toast(context);
+    mToast.setView(mView);
+    mToast.setDuration(Toast.LENGTH_SHORT);
+    mToast.show();
   }
 
-  private static Button getButtonInstance() {
-    mButton = (Button) mView.findViewById(R.id.button);
+  private static Button initSetButtonMsg(String msg) {
+    Button mButton = (Button) mView.findViewById(R.id.button);
+    mButton.setText(msg);
     return mButton;
   }
 }
