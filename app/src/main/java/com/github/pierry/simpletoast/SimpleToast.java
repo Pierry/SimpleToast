@@ -54,7 +54,7 @@ public class SimpleToast {
 
   @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void ok(Context context, String msg, Iconify.IconValue iconValue) {
     LayoutInflater myInflater = LayoutInflater.from(context);
-    View view = myInflater.inflate(R.layout.toast_ok, null);
+    View view = myInflater.inflate(R.layout.toast_ok_icon, null);
 
     Button button = (Button) view.findViewById(R.id.button);
     button.setText(msg);
@@ -86,7 +86,7 @@ public class SimpleToast {
 
   @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void error(Context context, String msg, Iconify.IconValue iconValue) {
     LayoutInflater myInflater = LayoutInflater.from(context);
-    View view = myInflater.inflate(R.layout.toast_error, null);
+    View view = myInflater.inflate(R.layout.toast_error_icon, null);
 
     Button button = (Button) view.findViewById(R.id.button);
     button.setText(msg);
@@ -118,7 +118,7 @@ public class SimpleToast {
 
   @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void info(Context context, String msg, Iconify.IconValue iconValue) {
     LayoutInflater myInflater = LayoutInflater.from(context);
-    View view = myInflater.inflate(R.layout.toast_info, null);
+    View view = myInflater.inflate(R.layout.toast_info_icon, null);
 
     Button button = (Button) view.findViewById(R.id.button);
     button.setText(msg);
