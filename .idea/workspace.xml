@@ -31,8 +31,8 @@
       <file leaf-file-name="SimpleToast.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/github/pierry/simpletoast/SimpleToast.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.54385966" vertical-offset="1359" max-vertical-offset="2278">
-              <caret line="113" column="26" selection-start-line="113" selection-start-column="26" selection-end-line="113" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.5980861" vertical-offset="1563" max-vertical-offset="2278">
+              <caret line="127" column="48" selection-start-line="127" selection-start-column="48" selection-end-line="127" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -2235,8 +2235,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/github/pierry/simpletoast/SimpleToast.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54385966" vertical-offset="1359" max-vertical-offset="2278">
-          <caret line="113" column="26" selection-start-line="113" selection-start-column="26" selection-end-line="113" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.5980861" vertical-offset="1563" max-vertical-offset="2278">
+          <caret line="127" column="48" selection-start-line="127" selection-start-column="48" selection-end-line="127" selection-end-column="48" />
           <folding />
         </state>
       </provider>

@@ -61,7 +61,7 @@ public class SimpleToast {
 
     IconTextView img = (IconTextView) view.findViewById(R.id.img);
     img.setBackground(new IconDrawable(context, iconValue)
-            .colorRes(R.color.white).sizeDp(30));
+            .colorRes(R.color.white).actionBarSize());
 
     Toast mytoast = new Toast(context);
 
@@ -93,7 +93,7 @@ public class SimpleToast {
 
     IconTextView img = (IconTextView) view.findViewById(R.id.img);
     img.setBackground(new IconDrawable(context, iconValue)
-        .colorRes(R.color.white).sizeDp(30));
+        .colorRes(R.color.white).actionBarSize());
 
     Toast mytoast = new Toast(context);
 
@@ -125,7 +125,7 @@ public class SimpleToast {
 
     IconTextView img = (IconTextView) view.findViewById(R.id.img);
     img.setBackground(new IconDrawable(context, iconValue)
-        .colorRes(R.color.white).sizeDp(30));
+        .colorRes(R.color.white).actionBarSize());
 
     Toast mytoast = new Toast(context);
 
