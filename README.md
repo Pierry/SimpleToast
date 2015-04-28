@@ -6,7 +6,7 @@ SimpleToast
 
 Notifications for Android (like a Toast) 
 
-Current version: v1.4
+Current version: v1.6
 
 Example
 ===========
@@ -14,6 +14,7 @@ Example
 ![alt tag](https://raw.githubusercontent.com/Pierry/SimpleToast/master/screentshots/ok.png)
 ![alt tag](https://raw.githubusercontent.com/Pierry/SimpleToast/master/screentshots/info.png)
 ![alt tag](https://raw.githubusercontent.com/Pierry/SimpleToast/master/screentshots/muted.png)
+![alt tag](https://raw.githubusercontent.com/Pierry/SimpleToast/master/screentshots/warning.png)
 
 
 Gradle
@@ -26,10 +27,10 @@ Into your build.gradle:
     }
 
     dependencies {
-      compile 'com.github.Pierry:SimpleToast:v1.4'
+      compile 'com.github.Pierry:SimpleToast:v1.6'
     }
 
-Ref. https://jitpack.io/#Pierry/SimpleToast/v1.4
+Ref. https://jitpack.io/#Pierry/SimpleToast/v1.6
 
 Usage
 =============
@@ -42,6 +43,7 @@ Create a SimpleToast for any CharSequence with default icon:
     SimpleToast.error(Context, CharSequence);
     SimpleToast.info(Context, CharSequence);
     SimpleToast.muted(Context, CharSequence);
+    SimpleToast.warning(Context, CharSequence);
 
 Using [Font Awesome](http://fortawesome.github.io/Font-Awesome/icons/):
 
@@ -49,6 +51,7 @@ Using [Font Awesome](http://fortawesome.github.io/Font-Awesome/icons/):
     SimpleToast.error(Context, CharSequence, "{fa-user}");
     SimpleToast.info(Context, CharSequence, "{fa-check-square}");
     SimpleToast.muted(Context, CharSequence, "{fa-github}");
+    SimpleToast.warning(Context, CharSequence, "{fa-exclamation-circle}");
     
 Use this link for icons:
 http://fortawesome.github.io/Font-Awesome/icons/
