@@ -51,7 +51,8 @@ public class SimpleToast {
     mytoast.show();
   }
 
-  @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void ok(Context context, String msg, int color, int borderColor) {
+  @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void ok(Context context, String msg, int color, int borderColor,
+      Iconify.IconValue iconValue) {
     LayoutInflater myInflater = LayoutInflater.from(context);
     View view = myInflater.inflate(R.layout.toast_base, null);
 
@@ -59,7 +60,7 @@ public class SimpleToast {
 
     GradientDrawable gradientDrawable = new GradientDrawable();
     gradientDrawable.setColor(color);
-    gradientDrawable.setAlpha(0);
+    gradientDrawable.setAlpha(100);
     gradientDrawable.setCornerRadius(4);
     gradientDrawable.setStroke(1, borderColor);
 
@@ -69,8 +70,8 @@ public class SimpleToast {
     button.setText(msg);
 
     IconTextView img = (IconTextView) view.findViewById(R.id.img);
-    img.setBackground(new IconDrawable(context, Iconify.IconValue.fa_share)
-            .colorRes(R.color.white));
+    img.setBackground(new IconDrawable(context, iconValue)
+            .colorRes(R.color.white).sizeDp(40));
 
     Toast mytoast = new Toast(context);
 
