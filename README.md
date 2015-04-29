@@ -27,6 +27,7 @@ Gradle
 ===========
 
 This library uses android-iconify:1.0.9.
+
 Into your build.gradle:
 
     repositories {
