@@ -66,6 +66,14 @@ Questions
 ==========
 Questions regarding SimpleToast can be asked on [StackOverflow, using the simpletoast tag](http://stackoverflow.com/questions/tagged/simpletoast).
 
+Credits
+==========
+[Joan Zapata](https://github.com/JoanZapata) He is the creator of [Android-Iconify](https://github.com/JoanZapata/android-iconify)
+
+Developed By
+==========
+Pierry Borges - http://www.pierrydev.com - pieerry@gmail.com
+
 License
 ==========
 
