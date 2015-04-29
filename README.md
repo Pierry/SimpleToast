@@ -26,6 +26,7 @@ Example
 Gradle
 ===========
 
+This library uses android-iconify:1.0.9.
 Into your build.gradle:
 
     repositories {
@@ -68,7 +69,9 @@ Questions regarding SimpleToast can be asked on [StackOverflow, using the simple
 
 Credits
 ==========
-[Joan Zapata](https://github.com/JoanZapata) He is the creator of [Android-Iconify](https://github.com/JoanZapata/android-iconify)
+[Joan Zapata](https://github.com/JoanZapata) creator of [Android-Iconify](https://github.com/JoanZapata/android-iconify)
+
+[Dave Gandy](https://github.com/davegandy) creator of [Font-Awesome](https://github.com/FortAwesome/Font-Awesome)
 
 Developed By
 ==========
