@@ -76,7 +76,7 @@ Credits
 
 Developed By
 ==========
-Pierry Borges - http://www.pierry.github.io - pieerry@gmail.com
+Pierry Borges - http://pierry.github.io - pieerry@gmail.com
 
 License
 ==========
