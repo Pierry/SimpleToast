@@ -11,7 +11,7 @@
       android:id="@+id/img"
       android:layout_marginBottom="15dp"
       android:layout_marginLeft="10dp"
-      android:textColor="@color/white"
+      android:textColor="#FFFFFF"
       android:layout_marginTop="15dp" />
 
   <Button
