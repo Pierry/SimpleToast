@@ -10,6 +10,12 @@ Current version: v1.6
 
 Example
 ===========
+### Default icons
+![alt tag](https://raw.githubusercontent.com/Pierry/SimpleToast/master/screentshots/ok_default.png)
+![alt tag](https://raw.githubusercontent.com/Pierry/SimpleToast/master/screentshots/cancel_default.png)
+![alt tag](https://raw.githubusercontent.com/Pierry/SimpleToast/master/screentshots/info_default.png)
+### Font awesome
+
 ![alt tag](https://raw.githubusercontent.com/Pierry/SimpleToast/master/screentshots/cancel.png)
 ![alt tag](https://raw.githubusercontent.com/Pierry/SimpleToast/master/screentshots/ok.png)
 ![alt tag](https://raw.githubusercontent.com/Pierry/SimpleToast/master/screentshots/info.png)
@@ -19,6 +25,8 @@ Example
 
 Gradle
 ===========
+
+This library uses android-iconify:1.0.9.
 
 Into your build.gradle:
 
@@ -59,6 +67,16 @@ http://fortawesome.github.io/Font-Awesome/icons/
 Questions
 ==========
 Questions regarding SimpleToast can be asked on [StackOverflow, using the simpletoast tag](http://stackoverflow.com/questions/tagged/simpletoast).
+
+Credits
+==========
+[Joan Zapata](https://github.com/JoanZapata) creator of [Android-Iconify](https://github.com/JoanZapata/android-iconify)
+
+[Dave Gandy](https://github.com/davegandy) creator of [Font-Awesome](https://github.com/FortAwesome/Font-Awesome)
+
+Developed By
+==========
+Pierry Borges - http://pierry.github.io - pieerry@gmail.com
 
 License
 ==========
