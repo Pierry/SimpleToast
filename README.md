@@ -6,7 +6,7 @@ SimpleToast
 
 Notifications for Android (like a Toast) 
 
-Current version: v1.6
+Current version: v1.7
 
 Example
 ===========
@@ -35,10 +35,10 @@ Into your build.gradle:
     }
 
     dependencies {
-      compile 'com.github.Pierry:SimpleToast:v1.6'
+      compile 'com.github.Pierry:SimpleToast:v1.7'
     }
 
-Ref. https://jitpack.io/#Pierry/SimpleToast/v1.6
+Ref. https://jitpack.io/#Pierry/SimpleToast/v1.7
 
 Usage
 =============
