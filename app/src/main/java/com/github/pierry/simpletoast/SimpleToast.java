@@ -68,7 +68,7 @@ public class SimpleToast {
     initSetButtonMsg(msg);
     mToast = new Toast(context);
     mToast.setView(mView);
-    mToast.setDuration(Toast.LENGTH_SHORT);
+    mToast.setDuration(Toast.LENGTH_LONG);
     mToast.show();
     if (time != 0) {
       Handler handler = new Handler();
@@ -90,7 +90,7 @@ public class SimpleToast {
     mToast.show();
   }
 
-  @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void error(Context context, String msg, String icon, int time){
+  @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void error(Context context, String msg, String icon){
     mInflater = LayoutInflater.from(context);
     if (!icon.equals("")) {
       mView = mInflater.inflate(R.layout.toast_error_icon, null);
@@ -104,6 +104,23 @@ public class SimpleToast {
     mToast = new Toast(context);
     mToast.setView(mView);
     mToast.setDuration(Toast.LENGTH_SHORT);
+    mToast.show();
+  }
+
+  @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void error(Context context, String msg, String icon, int time){
+    mInflater = LayoutInflater.from(context);
+    if (!icon.equals("")) {
+      mView = mInflater.inflate(R.layout.toast_error_icon, null);
+      IconTextView img = (IconTextView) mView.findViewById(R.id.img);
+      img.setText(icon);
+      img.setTextSize(20);
+    } else {
+      mView = mInflater.inflate(R.layout.toast_error, null);
+    }
+    initSetButtonMsg(msg);
+    mToast = new Toast(context);
+    mToast.setView(mView);
+    mToast.setDuration(Toast.LENGTH_LONG);
     mToast.show();
     if (time != 0) {
       Handler handler = new Handler();
@@ -125,7 +142,7 @@ public class SimpleToast {
     mToast.show();
   }
 
-  @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void info(Context context, String msg, String icon, int time){
+  @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void info(Context context, String msg, String icon){
     mInflater = LayoutInflater.from(context);
     if (!icon.equals("")) {
       mView = mInflater.inflate(R.layout.toast_info_icon, null);
@@ -139,6 +156,23 @@ public class SimpleToast {
     mToast = new Toast(context);
     mToast.setView(mView);
     mToast.setDuration(Toast.LENGTH_SHORT);
+    mToast.show();
+  }
+
+  @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void info(Context context, String msg, String icon, int time){
+    mInflater = LayoutInflater.from(context);
+    if (!icon.equals("")) {
+      mView = mInflater.inflate(R.layout.toast_info_icon, null);
+      IconTextView img = (IconTextView) mView.findViewById(R.id.img);
+      img.setText(icon);
+      img.setTextSize(20);
+    } else {
+      mView = mInflater.inflate(R.layout.toast_info, null);
+    }
+    initSetButtonMsg(msg);
+    mToast = new Toast(context);
+    mToast.setView(mView);
+    mToast.setDuration(Toast.LENGTH_LONG);
     mToast.show();
     if (time != 0) {
       Handler handler = new Handler();
@@ -160,7 +194,7 @@ public class SimpleToast {
     mToast.show();
   }
 
-  @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void muted(Context context, String msg, String icon, int time){
+  @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void muted(Context context, String msg, String icon){
     mInflater = LayoutInflater.from(context);
     if (!icon.equals("")) {
       mView = mInflater.inflate(R.layout.toast_muted_icon, null);
@@ -174,6 +208,23 @@ public class SimpleToast {
     mToast = new Toast(context);
     mToast.setView(mView);
     mToast.setDuration(Toast.LENGTH_SHORT);
+    mToast.show();
+  }
+
+  @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void muted(Context context, String msg, String icon, int time){
+    mInflater = LayoutInflater.from(context);
+    if (!icon.equals("")) {
+      mView = mInflater.inflate(R.layout.toast_muted_icon, null);
+      IconTextView img = (IconTextView) mView.findViewById(R.id.img);
+      img.setText(icon);
+      img.setTextSize(20);
+    } else {
+      mView = mInflater.inflate(R.layout.toast_muted, null);
+    }
+    initSetButtonMsg(msg);
+    mToast = new Toast(context);
+    mToast.setView(mView);
+    mToast.setDuration(Toast.LENGTH_LONG);
     mToast.show();
     if (time != 0) {
       Handler handler = new Handler();
@@ -195,7 +246,7 @@ public class SimpleToast {
     mToast.show();
   }
 
-  @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void warning(Context context, String msg, String icon, int time){
+  @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void warning(Context context, String msg, String icon){
     mInflater = LayoutInflater.from(context);
     if (!icon.equals("")) {
       mView = mInflater.inflate(R.layout.toast_warning_icon, null);
@@ -209,6 +260,23 @@ public class SimpleToast {
     mToast = new Toast(context);
     mToast.setView(mView);
     mToast.setDuration(Toast.LENGTH_SHORT);
+    mToast.show();
+  }
+
+  @TargetApi(Build.VERSION_CODES.JELLY_BEAN) public static void warning(Context context, String msg, String icon, int time){
+    mInflater = LayoutInflater.from(context);
+    if (!icon.equals("")) {
+      mView = mInflater.inflate(R.layout.toast_warning_icon, null);
+      IconTextView img = (IconTextView) mView.findViewById(R.id.img);
+      img.setText(icon);
+      img.setTextSize(20);
+    } else {
+      mView = mInflater.inflate(R.layout.toast_warning, null);
+    }
+    initSetButtonMsg(msg);
+    mToast = new Toast(context);
+    mToast.setView(mView);
+    mToast.setDuration(Toast.LENGTH_LONG);
     mToast.show();
     if (time != 0) {
       Handler handler = new Handler();
