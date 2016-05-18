@@ -315,4 +315,9 @@ public class SimpleToast {
         mButton.setText(msg);
         return mButton;
     }
+    
+    public static void CancelCurrentToast(){
+        if (mToast != null)
+            mToast.cancel();
+    }
 }
