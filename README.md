@@ -6,7 +6,7 @@ SimpleToast
 
 Notifications for Android (like a Toast) 
 
-Current version: v1.7
+Current version: v1.9
 
 Example
 ===========
